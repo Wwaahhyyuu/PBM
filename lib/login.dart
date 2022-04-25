@@ -1,3 +1,4 @@
+import 'package:coba1/Beranda.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -138,7 +139,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         fontWeight: FontWeight.bold,
                       ),
                       ),
-                      onPressed: () {}, 
+                      onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => beranda()));}, 
                       child: Text('Sign In')),   
                                          
                   ),                                 

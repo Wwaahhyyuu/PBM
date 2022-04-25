@@ -1,4 +1,3 @@
-import 'package:coba1/login.dart';
 import 'package:coba1/registrasi.dart';
 import 'package:flutter/material.dart';
 

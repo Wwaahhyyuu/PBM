@@ -62,8 +62,11 @@ flutter:
   assets:
     # - images/a_dot_burr.jpeg
     # - images/a_dot_ham.jpeg
-    - assets/logo.png
+    - assets/
     
+    
+
+
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -80,7 +83,7 @@ flutter:
   fonts:
     - family: Poppins
       fonts:
-        - asset: fonts/Poppins-Bold.ttf
+        - asset: fonts/Poppins-Black.ttf
         # - asset: fonts/Schyler-Italic.ttf
     #       style: italic
     # - family: Trajan Pro
