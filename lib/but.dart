@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'Beranda.dart';
 import 'package:coba1/service.dart';
 import 'package:coba1/main.dart';
-// import 'package:project/settings.dart';
+
 
 class Main extends StatefulWidget {
   const Main({Key? key}) : super(key: key);
@@ -31,7 +31,7 @@ class _MainState extends State<Main> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            BotNavIcon(0, Icons.home, 'Home'),
+            BotNavIcon(0, Icons.home, 'Home', ),
             BotNavIcon(1, Icons.chat, 'Chat'),
             BotNavIcon(2, Icons.location_on, 'Location'),
             BotNavIcon(3, Icons.align_vertical_bottom, 'Activity'),

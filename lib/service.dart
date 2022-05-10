@@ -16,6 +16,21 @@ class _ServiceState extends State<Service> {
       appBar: AppBar(
         toolbarHeight: 80,
         backgroundColor: Colors.white,
+         elevation: 0,
+        automaticallyImplyLeading: false,
+        flexibleSpace: SafeArea(
+        child: Container(
+            padding: EdgeInsets.only(right: 25, top: 20, left: 20),
+            child: Row(
+              children: <Widget>[
+                IconButton(
+                  onPressed: (){
+                    Navigator.pop(context);
+                  },
+                  icon: Icon(Icons.arrow_back_ios,color: Colors.black,),
+                ),])
+                ),
+      ),
         title: Center(
           child: Wrap(
           children: [
@@ -24,10 +39,10 @@ class _ServiceState extends State<Service> {
           ]
           )
         ),
+        
         actions: [
-          IconButton(onPressed:() {} , icon: Icon(Icons.notifications, color: Colors.black,))
-        ],
-      ),
+          IconButton(onPressed:(){Navigator.push(context, MaterialPageRoute(builder: (context) => beranda()));}, icon: Icon(Icons.notifications, color: Colors.black,), padding: EdgeInsets.only(right: 20),)
+        ],),
       body: Center(
         child:Column(
           children: [
@@ -53,7 +68,7 @@ class _ServiceState extends State<Service> {
 ),
             Container(
                       width: 150, height: 20,
-                      child: Text("See All", textAlign: TextAlign.end, style: TextStyle(color: FvColors.textview48FontColor, fontFamily: 'Poppins', fontSize: 14),),
+                      child: Text("See All", textAlign: TextAlign.end, style: TextStyle(color: Colors.blue, fontFamily: 'Poppins', fontSize: 14),),
                     ),
             Wrap(children: [
               GestureDetector(

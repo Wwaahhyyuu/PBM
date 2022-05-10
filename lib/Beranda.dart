@@ -46,7 +46,7 @@ class _berandaState extends State<beranda> {
           Wrap(
             children: [
               GestureDetector(
-              onTap: () {},
+              onTap: () {Navigator.push(context, MaterialPageRoute(builder: (context) => Service()));},
               child : 
               Container(
                 margin: EdgeInsets.all(10),
@@ -69,7 +69,7 @@ class _berandaState extends State<beranda> {
               ),
               ),
                 GestureDetector(
-              onTap: () {},
+              onTap: () {Navigator.push(context, MaterialPageRoute(builder: (context) => Service()));},
               child : 
               Container(
                 margin: EdgeInsets.all(10),
@@ -92,7 +92,7 @@ class _berandaState extends State<beranda> {
               ),
               ),
                             GestureDetector(
-              onTap: () {},
+              onTap: () {Navigator.push(context, MaterialPageRoute(builder: (context) => Service()));},
               child : 
               Container(
                 margin: EdgeInsets.all(10),
@@ -115,7 +115,7 @@ class _berandaState extends State<beranda> {
               ),
               ),
                             GestureDetector(
-              onTap: () {},
+              onTap: () {Navigator.push(context, MaterialPageRoute(builder: (context) => Service()));},
               child : 
               Container(
                 margin: EdgeInsets.all(10),
@@ -138,7 +138,7 @@ class _berandaState extends State<beranda> {
               ),
               ),
                             GestureDetector(
-              onTap: () {},
+              onTap: () {Navigator.push(context, MaterialPageRoute(builder: (context) => Service()));},
               child : 
               Container(
                 margin: EdgeInsets.all(10),
