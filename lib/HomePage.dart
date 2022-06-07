@@ -4,6 +4,8 @@ import 'package:coba1/service.dart';
 import 'package:coba1/tampilan.dart';
 import 'package:flutter/material.dart';
 import 'package:coba1/main.dart';
+import 'package:coba1/chatDetailPage.dart';
+import 'package:coba1/chatPage.dart';
 
 
 
@@ -18,7 +20,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Main(),
+      body: ChatPage(),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: 1,
         selectedItemColor: Colors.black,

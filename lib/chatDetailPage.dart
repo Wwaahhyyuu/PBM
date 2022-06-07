@@ -1,4 +1,5 @@
 
+import 'package:coba1/screen_camera.dart';
 import 'package:flutter/material.dart';
 import 'chatMessageModel.dart';
 import 'chatUsersModel.dart';
@@ -117,8 +118,25 @@ List<ChatMessage> messages = [
                       ),
                     ),
                   ),
+                  // FloatingActionButton(
+                  //   onPressed: (){},
+                  //   child: Icon(Icons.camera_alt_outlined, color: Colors.white,size: 18,),
+                  //   backgroundColor: Color(0xff845c44),
+                  //   elevation: 0,
+                  // ),
                   FloatingActionButton(
-                    onPressed: (){},
+                    onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => ScreenKamera()));}, 
+                    // onPressed: () async {
+                    //   var _iconCamera = 
+                    //       await Navigator.of(context).push(MaterialPageRoute(builder: (_) {return ScreenKamera();}));
+                    //   if (_iconCamera != null) {
+                    //     if (_iconCamera is String) {
+                    //       setState(() {
+                    //        icon.camera = _iconCamera
+                    //       });
+                    //     }
+                    //   }    
+                    // },
                     child: Icon(Icons.camera_alt_outlined, color: Colors.white,size: 18,),
                     backgroundColor: Color(0xff845c44),
                     elevation: 0,
@@ -137,7 +155,7 @@ List<ChatMessage> messages = [
                     elevation: 0,
                   ),
                 ],
-                
+                  
               ),
             ),
           ),

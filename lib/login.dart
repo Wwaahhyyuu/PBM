@@ -1,4 +1,5 @@
 import 'package:coba1/Beranda.dart';
+import 'package:coba1/auth.dart';
 import 'package:coba1/but.dart';
 import 'package:flutter/material.dart';
 
@@ -10,6 +11,7 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
+  AuthServices authServices = AuthServices();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -59,6 +61,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     width: 250,
                     height: 40,
                     child: TextField(
+                      controller: authServices.email,
                       decoration: InputDecoration(
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(100)
@@ -96,6 +99,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     width: 250,
                     height: 40,
                     child: TextField(
+                      controller: authServices.password,
                       decoration: InputDecoration(
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(100)
@@ -140,7 +144,12 @@ class _LoginScreenState extends State<LoginScreen> {
                         fontWeight: FontWeight.bold,
                       ),
                       ),
-                      onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => Main()));}, 
+                      // onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => Main()));}, 
+                      onPressed: () {
+                        if(authServices.email != "" && authServices.password != "" ){
+                            authServices.signIn();
+                        }  
+                      },                       
                       child: Text('Sign In')),   
                                          
                   ),                                 
@@ -186,6 +195,8 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                     ),
                   )
+
+
 
           ],
         ),

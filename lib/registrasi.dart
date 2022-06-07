@@ -1,3 +1,4 @@
+import 'package:coba1/auth.dart';
 import 'package:coba1/login.dart';
 import 'package:flutter/material.dart';
 
@@ -9,6 +10,7 @@ class Registrasi extends StatefulWidget {
 }
 
 class _RegistrasiState extends State<Registrasi> {
+  AuthServices authServices = AuthServices();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -126,6 +128,7 @@ class _RegistrasiState extends State<Registrasi> {
                     width: 250,
                     height: 40,
                     child: TextField(
+                      controller: authServices.email,
                       decoration: InputDecoration(
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(100)
@@ -162,6 +165,7 @@ class _RegistrasiState extends State<Registrasi> {
                     width: 250,
                     height: 40,
                     child: TextField(
+                      controller: authServices.password,
                       decoration: InputDecoration(
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(100)
@@ -182,7 +186,10 @@ class _RegistrasiState extends State<Registrasi> {
                         fontWeight: FontWeight.bold,
                       ),
                       ),
-                      onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => LoginScreen()));}, 
+                      onPressed: () {                        
+                        if(authServices.email != "" && authServices.password != "" ){
+                            authServices.signUp();
+                        }  }, 
                       child: Text('Sign Up')),   
                                          
                   ),                                 
