@@ -13,13 +13,13 @@ class ChatPage extends StatefulWidget {
 class _ChatPageState extends State<ChatPage> {
     List<ChatUsers> chatUsers = [
     ChatUsers(name: "ASUS CENTER", messageText: "Selamat datang di Asus Center. Kami melayani jasa service...", imageURL: "assets/asus.jpeg", time: "Now"),
-    ChatUsers(name: "ACER SERVICE", messageText: "Selamat datang di Acer Service. Kami melayani jasa ser....", imageURL: "assets/acer.jpeg", time: "Yesterday"),
-    ChatUsers(name: "AXIOO SERVICE", messageText: "Selamat datang di Axioo Service. Kami melayani jasa serv...", imageURL: "assets/axioo.jpeg", time: "31 Mar"),
-    ChatUsers(name: "HP CENTER", messageText: "Selamat datang di HP Center. Kami melayani jasa serv...", imageURL: "assets/hps.jpeg", time: "28 Mar"),
-    ChatUsers(name: "LENOVO CENTER", messageText: "Selamat datang di Lenovo Center. Kami melayani jasa serv...", imageURL: "assets/lenovo.jpeg", time: "23 Mar"),
-    ChatUsers(name: "SAMSUNG SERVICE", messageText: "Selamat datang di Samsung Service. Kami melayani jasa...", imageURL: "assets/samsung.png", time: "17 Mar"),
-    ChatUsers(name: "VIVO CENTER", messageText: "Selamat datang di Vivo Center. Kami melayani jasa service...", imageURL: "assets/vivo.png", time: "24 Feb"),
-    ChatUsers(name: "OPPO CENTER", messageText: "Selamat datang di Oppo Center. Kami melayani jasa service...", imageURL: "assets/oppo.png", time: "18 Feb"),
+    ChatUsers(name: "ACER SERVICE", messageText: "Selamat datang di Acer Service. Kami melayani jasa ser....", imageURL: "assets/asus.jpeg", time: "Yesterday"),
+    ChatUsers(name: "AXIOO SERVICE", messageText: "Selamat datang di Axioo Service. Kami melayani jasa serv...", imageURL: "assets/asus.jpeg", time: "31 Mar"),
+    ChatUsers(name: "HP CENTER", messageText: "Selamat datang di HP Center. Kami melayani jasa serv...", imageURL: "assets/asus.jpeg", time: "28 Mar"),
+    ChatUsers(name: "LENOVO CENTER", messageText: "Selamat datang di Lenovo Center. Kami melayani jasa serv...", imageURL: "assets/asus.jpeg", time: "23 Mar"),
+    ChatUsers(name: "SAMSUNG SERVICE", messageText: "Selamat datang di Samsung Service. Kami melayani jasa...", imageURL: "assets/asus.jpeg", time: "17 Mar"),
+    ChatUsers(name: "VIVO CENTER", messageText: "Selamat datang di Vivo Center. Kami melayani jasa service...", imageURL: "assets/asus.jpeg", time: "24 Feb"),
+    ChatUsers(name: "OPPO CENTER", messageText: "Selamat datang di Oppo Center. Kami melayani jasa service...", imageURL: "assets/asus.jpeg", time: "18 Feb"),
   ];
   @override
   Widget build(BuildContext context) {

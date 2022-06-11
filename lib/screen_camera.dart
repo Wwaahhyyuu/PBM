@@ -13,7 +13,6 @@ class ScreenKamera extends StatefulWidget {
 
 class _ScreenKameraState extends State<ScreenKamera> {
   var camera_ready = false;
-
   // String nama = "";
 
   // late CameraController _camController;

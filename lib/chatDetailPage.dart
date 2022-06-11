@@ -21,70 +21,58 @@ List<ChatMessage> messages = [
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-        elevation: 0,
-        automaticallyImplyLeading: false,
+              appBar: AppBar(
+        toolbarHeight: 60,
         backgroundColor: Colors.white,
+         elevation: 0,
+        automaticallyImplyLeading: false,
         flexibleSpace: SafeArea(
-          child: Container(
-            padding: EdgeInsets.only(right: 16),
+        child: Container(
+            padding: EdgeInsets.only(right: 25, top: 15, left: 20),
             child: Row(
-              children: <Widget>[
+              children:[
                 IconButton(
                   onPressed: (){
                     Navigator.pop(context);
                   },
                   icon: Icon(Icons.arrow_back_ios,color: Colors.black,),
+                ),])
                 ),
-                SizedBox(width: 2,),
-                CircleAvatar(
-                  radius: 20.0,
-                  child: ClipRRect(
-                    child: Image.asset('asus.jpg'),
-                    borderRadius: BorderRadius.circular(50.0),
-                ),
-                ),
-                SizedBox(width: 12,),
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Text("Naradira",style: TextStyle( fontSize: 16 ,fontWeight: FontWeight.w600),),
-                      SizedBox(height: 6,),
-                      Text("Online",style: TextStyle(color: Colors.grey.shade600, fontSize: 13),),
-                    ],
-                  ),
-                ),
-                Icon(Icons.settings,color: Colors.black54,),
-              ],
-            ),
-          ),
-        ),
       ),
-      body: Stack(
+        title: Center(
+          child: Wrap(
+          children: [
+            Text("Chat", style: TextStyle(color: Colors.black, fontSize: 16, fontFamily: 'Poppins')
+            ),
+          ]
+          )
+        )
+      ),
+      body: Column(
         children: <Widget>[
-          ListView.builder(
-            itemCount: messages.length,
-            shrinkWrap: true,
-            padding: EdgeInsets.only(top: 10,bottom: 10),
-            physics: NeverScrollableScrollPhysics(),
-            itemBuilder: (context, index){
-              return Container(
-                padding: EdgeInsets.only(left: 16,right: 16,top: 10,bottom: 10),
-                child: Align(
-        alignment: (messages[index].messageType == "receiver"?Alignment.topLeft:Alignment.topRight),
-        child: Container(
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(20),
-            color: (messages[index].messageType  == "receiver"?Color(0xFFcd9a81):Color(0xff845c44)),
-          ),
-          padding: EdgeInsets.all(16),
-          child: Text(messages[index].messageContent, style: TextStyle(fontSize: 15, color: Colors.white), ),
-        ),
-                )
-              );
-            },
+          Expanded(
+            child: ListView.builder(
+              itemCount: messages.length,
+              shrinkWrap: true,
+              padding: EdgeInsets.only(top: 10,bottom: 10),
+              physics: NeverScrollableScrollPhysics(),
+              itemBuilder: (context, index){
+                return Container(
+                  padding: EdgeInsets.only(left: 16,right: 16,top: 10,bottom: 10),
+                  child: Align(
+                  alignment: (messages[index].messageType == "receiver"?Alignment.topLeft:Alignment.topRight),
+                  child: Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(20),
+              color: (messages[index].messageType  == "receiver"?Color(0xFFcd9a81):Color(0xff845c44)),
+            ),
+            padding: EdgeInsets.all(16),
+            child: Text(messages[index].messageContent, style: TextStyle(fontSize: 15, color: Colors.white), ),
+                  ),
+                  )
+                );
+              },
+            ),
           ),
           Align(
             alignment: Alignment.bottomLeft,
@@ -125,6 +113,7 @@ List<ChatMessage> messages = [
                   //   elevation: 0,
                   // ),
                   FloatingActionButton(
+                    heroTag: 'camera',
                     onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => ScreenKamera()));}, 
                     // onPressed: () async {
                     //   var _iconCamera = 
@@ -142,6 +131,7 @@ List<ChatMessage> messages = [
                     elevation: 0,
                   ),
                   FloatingActionButton(
+                    heroTag: 'mic',
                     onPressed: (){},
                     child: Icon(Icons.mic, color: Colors.white,size: 18,),
                     backgroundColor: Color(0xff845c44),
@@ -149,6 +139,7 @@ List<ChatMessage> messages = [
                   ),
                   SizedBox(width: 15,),
                   FloatingActionButton(
+                    heroTag:'send' ,
                     onPressed: (){},
                     child: Icon(Icons.send,color: Colors.white,size: 18,),
                     backgroundColor: Color(0xff845c44),

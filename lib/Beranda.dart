@@ -1,3 +1,4 @@
+import 'package:coba1/notification.dart';
 import 'package:flutter/material.dart';
 import 'Fvcolors.dart';
 import 'service.dart';
@@ -28,7 +29,7 @@ class _berandaState extends State<beranda> {
           )
         ),
         actions: [
-          IconButton(onPressed:() {} , icon: Icon(Icons.notifications, color: Colors.black,))
+          IconButton(onPressed:() {Navigator.push(context, MaterialPageRoute(builder: (context) => notification()));} , icon: Icon(Icons.notifications, color: Colors.black,))
         ],
       ) ,
       // floatingActionButton: FloatingActionButton(

@@ -1,7 +1,12 @@
+import 'package:coba1/activity.dart';
+import 'package:coba1/maps.dart';
 import 'package:flutter/material.dart';
 import 'Beranda.dart';
 import 'package:coba1/service.dart';
 import 'package:coba1/main.dart';
+import 'chatPage.dart';
+import 'location.dart';
+import 'activity.dart';
 
 
 class Main extends StatefulWidget {
@@ -12,11 +17,14 @@ class Main extends StatefulWidget {
 }
 
 class _MainState extends State<Main> {
-  int pageIndex = 1;
+  int pageIndex = 0;
 
   final pages = [
     const beranda(),
-    const Service(),
+    ChatPage(),
+    const MapsFeature(),
+    const activity(),
+
   ];
 
   @override

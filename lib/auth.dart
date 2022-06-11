@@ -8,9 +8,9 @@ class AuthServices{
   TextEditingController email = TextEditingController();
   TextEditingController password = TextEditingController();
 
-  void signIn()async{
+  void signIn(String email, String password)async{
     try{
-      await auth.signInWithEmailAndPassword(email: email.text, password: password.text).then((value) => {
+      await auth.signInWithEmailAndPassword(email: email, password: password).then((value) => {
         print("User is Logged In")
       });
     }
@@ -19,10 +19,10 @@ class AuthServices{
     }
   }
 
-  void signUp()async{
+  void signUp(String email, String password)async{
     try{
-      await auth.createUserWithEmailAndPassword(email: email.text, password: password.text).then((value) => {
-        print("User is Registered")
+      await auth.createUserWithEmailAndPassword(email: email, password: password).then((value) {
+        print("User is Registered");
       });
     }
     catch (e){
