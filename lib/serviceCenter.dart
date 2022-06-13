@@ -1,7 +1,11 @@
+import 'package:coba1/detailO.dart';
+import 'package:coba1/notification.dart';
+import 'package:coba1/payment.dart';
+import 'package:coba1/ser.dart';
 import 'package:flutter/material.dart';
 import 'Beranda.dart';
 import 'Fvcolors.dart';
-
+import 'payment.dart';
 class Service extends StatefulWidget {
   const Service({ Key? key }) : super(key: key);
 
@@ -25,7 +29,7 @@ class _ServiceState extends State<Service> {
               children: <Widget>[
                 IconButton(
                   onPressed: (){
-                    Navigator.pop(context);
+                    Navigator.pop(context, MaterialPageRoute(builder: (context) =>beranda()));
                   },
                   icon: Icon(Icons.arrow_back_ios,color: Colors.black,),
                 ),])
@@ -41,7 +45,7 @@ class _ServiceState extends State<Service> {
         ),
         
         actions: [
-          IconButton(onPressed:(){Navigator.push(context, MaterialPageRoute(builder: (context) => beranda()));}, icon: Icon(Icons.notifications, color: Colors.black,), padding: EdgeInsets.only(right: 20),)
+          IconButton(onPressed:(){Navigator.push(context, MaterialPageRoute(builder: (context) => notification()));}, icon: Icon(Icons.notifications, color: Colors.black,), padding: EdgeInsets.only(right: 20),)
         ],),
       body: Center(
         child:Column(
@@ -99,7 +103,7 @@ class _ServiceState extends State<Service> {
               ),
               ),
               GestureDetector(
-              onTap: () {},
+              onTap: () {Navigator.push(context, MaterialPageRoute(builder: (context) => serviceOrder()));},
               child : 
               Container(
                 margin: EdgeInsets.all(10),
@@ -126,7 +130,7 @@ class _ServiceState extends State<Service> {
               ),
               ),
               GestureDetector(
-              onTap: () {},
+              onTap: () {Navigator.push(context, MaterialPageRoute(builder: (context) => serviceOrder()));},
               child : 
               Container(
                 margin: EdgeInsets.all(10),
@@ -138,7 +142,7 @@ class _ServiceState extends State<Service> {
                   children: [
                     Container(
                      width: MediaQuery.of(context).size.width, height: 90,
-                     child: Image.asset("assets/Acer.jpeg")
+                     child: Image.asset("assets/acer.jpeg")
                     ),
                     Container(
                       width: MediaQuery.of(context).size.width, height: 15,
@@ -153,7 +157,7 @@ class _ServiceState extends State<Service> {
               ),
               ),
               GestureDetector(
-              onTap: () {},
+              onTap: () {Navigator.push(context, MaterialPageRoute(builder: (context) => serviceOrder()));},
               child : 
               Container(
                 margin: EdgeInsets.all(10),
@@ -180,7 +184,7 @@ class _ServiceState extends State<Service> {
               ),
               ),
               GestureDetector(
-              onTap: () {},
+              onTap: () {Navigator.push(context, MaterialPageRoute(builder: (context) => serviceOrder()));},
               child : 
               Container(
                 margin: EdgeInsets.all(10),
@@ -207,7 +211,7 @@ class _ServiceState extends State<Service> {
               ),
               ),
               GestureDetector(
-              onTap: () {},
+              onTap: () {Navigator.push(context, MaterialPageRoute(builder: (context) => serviceOrder()));},
               child : 
               Container(
                 margin: EdgeInsets.all(10),

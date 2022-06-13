@@ -1,8 +1,9 @@
 import 'package:coba1/activity.dart';
 import 'package:coba1/maps.dart';
+import 'package:coba1/profil.dart';
 import 'package:flutter/material.dart';
 import 'Beranda.dart';
-import 'package:coba1/service.dart';
+import 'package:coba1/serviceCenter.dart';
 import 'package:coba1/main.dart';
 import 'chatPage.dart';
 import 'location.dart';
@@ -24,6 +25,7 @@ class _MainState extends State<Main> {
     ChatPage(),
     const MapsFeature(),
     const activity(),
+    const profile()
 
   ];
 

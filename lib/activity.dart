@@ -73,7 +73,7 @@ class _activityState extends State<activity> {
                         style: TextStyle(color: Colors.black),
                       ),
                       Container(
-                          margin: EdgeInsets.fromLTRB(104, 5, 0, 0),
+                          margin: EdgeInsets.fromLTRB(90, 5, 0, 0),
                           child: Row(
                             children: [
                               Text("IDR Rp. 100.000",
@@ -108,7 +108,7 @@ class _activityState extends State<activity> {
                         style: TextStyle(color: Colors.black),
                       ),
                       Container(
-                          margin: EdgeInsets.fromLTRB(104, 5, 0, 0),
+                          margin: EdgeInsets.fromLTRB(90, 5, 0, 0),
                           child: Row(
                             children: [
                               Text("IDR Rp. 150.000",
@@ -143,7 +143,7 @@ class _activityState extends State<activity> {
                         style: TextStyle(color: Colors.black),
                       ),
                       Container(
-                          margin: EdgeInsets.fromLTRB(104, 5, 0, 0),
+                          margin: EdgeInsets.fromLTRB(90, 5, 0, 0),
                           child: Row(
                             children: [
                               Text("IDR Rp. 150.000",
@@ -178,7 +178,7 @@ class _activityState extends State<activity> {
                         style: TextStyle(color: Colors.black),
                       ),
                       Container(
-                          margin: EdgeInsets.fromLTRB(104, 5, 0, 0),
+                          margin: EdgeInsets.fromLTRB(90, 5, 0, 0),
                           child: Row(
                             children: [
                               Text("IDR Rp. 150.000",
@@ -213,7 +213,7 @@ class _activityState extends State<activity> {
                         style: TextStyle(color: Colors.black),
                       ),
                       Container(
-                          margin: EdgeInsets.fromLTRB(104, 5, 0, 0),
+                          margin: EdgeInsets.fromLTRB(90, 5, 0, 0),
                           child: Row(
                             children: [
                               Text("IDR Rp. 150.000",
@@ -248,7 +248,7 @@ class _activityState extends State<activity> {
                         style: TextStyle(color: Colors.black),
                       ),
                       Container(
-                          margin: EdgeInsets.fromLTRB(104, 5, 0, 0),
+                          margin: EdgeInsets.fromLTRB(90, 5, 0, 0),
                           child: Row(
                             children: [
                               Text("IDR Rp. 150.000",
@@ -283,7 +283,7 @@ class _activityState extends State<activity> {
                         style: TextStyle(color: Colors.black),
                       ),
                       Container(
-                          margin: EdgeInsets.fromLTRB(104, 5, 0, 0),
+                          margin: EdgeInsets.fromLTRB(90, 5, 0, 0),
                           child: Row(
                             children: [
                               Text("IDR Rp. 170.000",

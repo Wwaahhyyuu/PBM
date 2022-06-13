@@ -1,3 +1,5 @@
+import 'package:coba1/detailO.dart';
+import 'package:coba1/payment.dart';
 import 'package:flutter/material.dart';
 import 'Beranda.dart';
 import 'Fvcolors.dart';
@@ -308,6 +310,9 @@ class _NpaymentState extends State<Npayment> {
           ]
         ),
       ),
+       GestureDetector(
+              onTap: () {Navigator.push(context, MaterialPageRoute(builder: (context) => payment()));},
+              child : 
       Container( 
                 margin: EdgeInsets.only(left: 130, top: 30),             
                 width: 100,
@@ -326,6 +331,7 @@ class _NpaymentState extends State<Npayment> {
                ),
           ]
         )) 
+       )
           ]
         ))  
           ]

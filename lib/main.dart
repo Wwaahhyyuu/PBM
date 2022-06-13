@@ -4,6 +4,7 @@ import 'package:coba1/dialog.dart';
 import 'package:coba1/maps.dart';
 import 'package:coba1/notification.dart';
 import 'package:coba1/profil.dart';
+import 'package:coba1/ser.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/cupertino.dart';
@@ -18,7 +19,7 @@ import 'package:coba1/chatPage.dart';
 import 'package:coba1/detailO.dart';
 import 'package:coba1/login.dart';
 import 'package:coba1/payment.dart';
-import 'package:coba1/service.dart';
+import 'package:coba1/serviceCenter.dart';
 import 'package:coba1/tampilan.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart' ;
@@ -30,6 +31,7 @@ import 'payment2.dart';
 import 'screen_camera.dart';
 import 'package:coba1/maps.dart';
 import 'location.dart';
+
 
 
 void main() async {

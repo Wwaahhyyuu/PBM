@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'Beranda.dart';
 import 'Fvcolors.dart';
 import 'main.dart';
-import 'service.dart';
+import 'serviceCenter.dart';
 class DetailO extends StatefulWidget {
   const DetailO({ Key? key }) : super(key: key);
 
@@ -273,7 +273,7 @@ class _NpaymentState extends State<DetailO> {
             Wrap(
             children: [
               GestureDetector(
-              onTap: () {Navigator.push(context, MaterialPageRoute(builder: (context) => Service()));},
+              onTap: () {Navigator.push(context, MaterialPageRoute(builder: (context) => beranda()));},
               child : 
               Container(
                 margin: EdgeInsets.all(10),
@@ -297,7 +297,7 @@ class _NpaymentState extends State<DetailO> {
               ),
               ),
               GestureDetector(
-              onTap: () {Navigator.push(context, MaterialPageRoute(builder: (context) => Service()));},
+              onTap: () {Navigator.push(context, MaterialPageRoute(builder: (context) => beranda()));},
               child : 
               Container(
                 margin: EdgeInsets.all(10),
@@ -321,7 +321,7 @@ class _NpaymentState extends State<DetailO> {
               ),
               ),
               GestureDetector(
-              onTap: () {Navigator.push(context, MaterialPageRoute(builder: (context) => Service()));},
+              onTap: () {Navigator.push(context, MaterialPageRoute(builder: (context) => beranda()));},
               child : 
               Container(
                 margin: EdgeInsets.all(10),

@@ -1,6 +1,9 @@
+import 'package:coba1/detailO.dart';
+import 'package:coba1/payment2.dart';
 import 'package:flutter/material.dart';
 import 'Beranda.dart';
 import 'Fvcolors.dart';
+import 'ser.dart';
 
 class payment extends StatefulWidget {
   const payment({ Key? key }) : super(key: key);
@@ -93,7 +96,7 @@ class _paymentState extends State<payment> {
                   ),
                   Container(
                     margin: EdgeInsets.only(left: 20, top: 20),
-                    child: Row(
+                    child:Row(
                       children: [
                         const Icon(
                           Icons.circle_outlined,
@@ -107,22 +110,26 @@ class _paymentState extends State<payment> {
                             fontWeight: FontWeight.bold
                           ),
                         ),
-                        Container(
+                          Container(
                           margin: EdgeInsets.only(left: 170),
                           child: Row(
-                          children: [
-                            const Icon(
-                              Icons.arrow_forward_ios,
-                              color: Colors.white ,
-                            )
-                      ],
-                        ),
-                        ),
-                      ],                      
+                         children: [
+                            IconButton(
+                          onPressed: (){
+                          Navigator.pop(context, MaterialPageRoute(builder: (context) => Npayment()));
+                  },
+                  icon: Icon(Icons.arrow_forward_ios,color: Colors.white,
+                            ))
+                      ],                     
                     ),
                   ),
+                      ]
+                    ),
+                  ),
+                
+                      
                    Container(
-                    margin: EdgeInsets.only(left: 20, top: 20),
+                    margin: EdgeInsets.only(left: 30, top: 20),
                     child: Row(
                       children: [
                         const Icon(
@@ -271,6 +278,9 @@ class _paymentState extends State<payment> {
           ]
         ),
       ),
+       GestureDetector(
+              onTap: () {Navigator.push(context, MaterialPageRoute(builder: (context) =>DetailO()));},
+              child : 
       Container( 
                 margin: EdgeInsets.only(left: 130, top: 30),             
                 width: 100,
@@ -279,20 +289,25 @@ class _paymentState extends State<payment> {
                 borderRadius: BorderRadius.circular(5),
                 color: Color.fromARGB(255, 209, 174, 153),
               ),
+
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                 SizedBox(width: 10,),
                 Text('ORDER',
                  style: const TextStyle(fontSize: 14, color: Colors.white, fontFamily: 'Poppins'
-                ),
+                ),             
                ),
+               
           ]
-        )) 
+        )),
+        
+       )
           ]
         ))  
           ]
         ))
+       
          );
   }
 }

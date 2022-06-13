@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-// import 'package:awesome_dialog/awesome_dialog.dart';
+
 
 class BiayaKirim extends StatefulWidget {
   const BiayaKirim({Key? key}) : super(key: key);
@@ -43,7 +43,7 @@ max (45 x 40 x 35 cm)"""
     final double screenHeight = MediaQuery.of(context).size.height;
     final double screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
-      backgroundColor: Color.fromRGBO(136, 204, 241, 1),
+      backgroundColor: Color.fromARGB(255, 102, 57, 3),
       appBar: AppBar(
         title: Text("Biaya Pengiriman"),
       ),
@@ -175,8 +175,10 @@ max (45 x 40 x 35 cm)"""
                           ));
                 },
                 child: Text("Harga Ukuran"),
+                
                 style: ElevatedButton.styleFrom(
                   minimumSize: Size(200, 40),
+                  
                   textStyle: TextStyle(
                     fontSize: 16,
                   ),

@@ -1,7 +1,7 @@
 import 'package:coba1/notification.dart';
 import 'package:flutter/material.dart';
 import 'Fvcolors.dart';
-import 'service.dart';
+import 'serviceCenter.dart';
 
 class beranda extends StatefulWidget {
   const beranda({ Key? key }) : super(key: key);

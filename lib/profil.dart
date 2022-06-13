@@ -1,3 +1,6 @@
+import 'package:coba1/Beranda.dart';
+import 'package:coba1/notification.dart';
+import 'package:coba1/tampilan.dart';
 import 'package:flutter/material.dart';
 import 'but.dart';
 //import './profile_model.dart';
@@ -14,16 +17,37 @@ class profile extends StatefulWidget {
 class _profileState extends State<profile> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      
-    );
-  }
-}
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: CustomScrollView(
+     return Scaffold( 
+      //      appBar: AppBar(
+      //   toolbarHeight: 80,
+      //   backgroundColor: Colors.white,
+      //    elevation: 0,
+      //   automaticallyImplyLeading: false,
+      //   flexibleSpace: SafeArea(
+      //   child: Container(
+      //       padding: EdgeInsets.only(right: 25, top: 20, left: 20),
+      //       child: Row(
+      //         children: <Widget>[
+      //           IconButton(
+      //             onPressed: (){
+      //               Navigator.pop(context);
+      //             },
+      //             icon: Icon(Icons.arrow_back_ios,color: Colors.black,),
+      //           ),])
+      //           ),
+      // ),
+      //   title: Center(
+      //     child: Wrap(
+      //     children: [
+      //       Text("Profil", style: TextStyle(color: Colors.black, fontSize: 16, fontFamily: 'Poppins')
+      //       ),
+      //     ]
+      //     )
+      //   ),
+      //    actions: [
+      //     IconButton(onPressed:(){Navigator.push(context, MaterialPageRoute(builder: (context) => notification()));}, icon: Icon(Icons.notifications, color: Colors.black,), padding: EdgeInsets.only(right: 20),)
+      //   ],),
+               body: CustomScrollView(
         slivers: <Widget>[
           ProfileViewAppBar(),
           SliverList(delegate: SliverChildListDelegate([
@@ -32,10 +56,13 @@ class _profileState extends State<profile> {
                 width: 100.0,
                 height: 100.0,
                 decoration: BoxDecoration(
+                  boxShadow: [
+                    BoxShadow(
+                      color: Color.fromARGB(255, 123, 81, 66),
+                      blurRadius: 10.0
+                    )
+                  ],
                   borderRadius: BorderRadius.circular(100.0),
-                  gradient: LinearGradient(
-                    colors: [Colors.red, Colors.red]
-                  )
                 ),
                 
                 child: CircleAvatar(
@@ -53,15 +80,17 @@ class _profileState extends State<profile> {
             Center(
               child: Text('Naradira', style: TextStyle(
                 fontSize: 18.0,
-                color: Colors.red,
+                //color: RecehanColors.red,
+                color: Colors.black,
                 fontWeight: FontWeight.bold
               ))
             ),
             Center(
               child: Text('Naradiratriandini@gmail.com', style: TextStyle(
                 fontSize: 18.0,
-                color: Colors.black.withOpacity(.2),
-                fontWeight: FontWeight.bold
+                // color: Colors.black.withOpacity(.2),
+                color: Colors.black,
+                //fontWeight: FontWeight.bold
               ))
             ),
 
@@ -73,140 +102,225 @@ class _profileState extends State<profile> {
               
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  
+                children: <Widget>[                 
                   Text('Account', style:TextStyle(
-                    fontSize: 15.0,
+                    fontSize: 16,
                     fontWeight: FontWeight.w600,
                     fontFamily: 'OpenSans'
                   )),
                   SizedBox(height: 10.0),
- 
-                  Wrap(
-                    children: List.generate(1, (_) {
-                      return Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: ListTile(
-                          contentPadding: EdgeInsets.all(0.0),
-                          leading: Container(
-                            width: 350.0,
-                            height: 500.0,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(60.0),
-                            ),
+
+            Container(
+              
+              width: 380,
+              height: 400,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                color: Color(0xff845c44),          
+              ),
+              child:Column(children: [
+                Container(
+                  margin: EdgeInsets.only(left: 20),
+                child: Row(
+                  children: [
+                    const Icon(
+                      Icons.language_outlined,color: Colors.white
+                    ),
+                     SizedBox(width: 10,),
+                        Text(
+                          'Change Language', textAlign: TextAlign.start,
+                          style: const TextStyle(fontSize: 14,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold
                           ),
-                          title: Text('Change Language'),
-                          // subtitle: Text('We Have More Project'),
                         ),
-                        
-                      );
-                    }),
+                        Container(
+                          margin: EdgeInsets.only(left: 140),
+                          child: Row(
+                         children: [
+                            IconButton(
+                          onPressed: (){},
+                  icon: Icon(Icons.arrow_forward_ios,color: Colors.white,
+                            ))
+                      ],                     
+                    ),
                   ),
-                  Wrap(
-                    children: List.generate(1, (_) {
-                      return Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: ListTile(
-                          contentPadding: EdgeInsets.all(0.0),
-                          leading: Container(
-                            width: 50.0,
-                            height: 50.0,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(60.0),
-                             
-                            ),
+                  ],
+                )
+                ),
+                Container(
+                  margin: EdgeInsets.only(left: 20),
+                child: Row(
+                  children: [
+                    const Icon(
+                      Icons.assistant_rounded, color: Colors.white
+                    ),
+                     SizedBox(width: 10,),
+                        Text(
+                          'Term Of Service', textAlign: TextAlign.start,
+                          style: const TextStyle(fontSize: 14,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold
                           ),
-                          title: Text('Term of Service'),
-                          // subtitle: Text('We Have More Project'),
                         ),
-                        
-                      );
-                    }),
-                  ),  
-                  Wrap(
-                    children: List.generate(1, (_) {
-                      return Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: ListTile(
-                          contentPadding: EdgeInsets.all(0.0),
-                          leading: Container(
-                            width: 50.0,
-                            height: 50.0,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(60.0),
-                              
-                            ),
-                          ),
-                          title: Text('Payment Method'),
-                          // subtitle: Text('We Have More Project'),
-                        ),
-                        
-                      );
-                    }),
-                  ), 
-                  Wrap(
-                    children: List.generate(1, (_) {
-                      return Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: ListTile(
-                          contentPadding: EdgeInsets.all(0.0),
-                          leading: Container(
-                            width: 50.0,
-                            height: 50.0,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(60.0),
-                             
-                            ),
-                          ),
-                          title: Text('Favorite Service'),
-                          // subtitle: Text('We Have More Project'),
-                        ),
-                        
-                      );
-                    }),
+                        Container(
+                          margin: EdgeInsets.only(left: 150),
+                          child: Row(
+                         children: [
+                            IconButton(
+                          onPressed: (){},
+                  icon: Icon(Icons.arrow_forward_ios, color: Colors.white,
+                            ))
+                      ],                     
+                    ),
                   ),
-                  Wrap(
-                    children: List.generate(1, (_) {
-                      return Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: ListTile(
-                          contentPadding: EdgeInsets.all(0.0),
-                          leading: Container(
-                            width: 50.0,
-                            height: 50.0,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(60.0),
-                             
-                            ),
+                  ],
+                )
+                ),
+                 Container(
+                  margin: EdgeInsets.only(left: 20),
+                child: Row(
+                  children: [
+                    const Icon(
+                      Icons.payment_outlined,color: Colors.white
+                    ),
+                     SizedBox(width: 10,),
+                        Text(
+                          'Payment Method', textAlign: TextAlign.start,
+                          style: const TextStyle(fontSize: 14,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold
                           ),
-                          title: Text('Invite Friends'),
-                          // subtitle: Text('We Have More Project'),
                         ),
-                        
-                      );
-                    }),
-                  ), 
-                  Wrap(
-                    children: List.generate(1, (_) {
-                      return Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: ListTile(
-                          contentPadding: EdgeInsets.all(0.0),
-                          leading: Container(
-                            width: 50.0,
-                            height: 50.0,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(60.0),
-                              
-                            ),
+                        Container(
+                          margin: EdgeInsets.only(left: 145),
+                          child: Row(
+                         children: [
+                            IconButton(
+                          onPressed: (){},
+                  icon: Icon(Icons.arrow_forward_ios,color: Colors.white,
+                            ))
+                      ],                     
+                    ),
+                  ),
+                  ],
+                )
+                ),
+                 Container(
+                  margin: EdgeInsets.only(left: 20),
+                child: Row(
+                  children: [
+                    const Icon(
+                      Icons.star_border_outlined,color: Colors.white
+                    ),
+                     SizedBox(width: 10,),
+                        Text(
+                          'Favorite Service', textAlign: TextAlign.start,
+                          style: const TextStyle(fontSize: 14,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold
                           ),
-                          title: Text('About Us'),
-                          // subtitle: Text('We Have More Project'),
                         ),
-                        
-                      );
-                    }),
-                  )
+                        Container(
+                          margin: EdgeInsets.only(left: 150),
+                          child: Row(
+                         children: [
+                            IconButton(
+                          onPressed: (){},
+                  icon: Icon(Icons.arrow_forward_ios,color: Colors.white,
+                            ))
+                      ],                     
+                    ),
+                  ),
+                  ],
+                )
+                ),
+                Container(
+                  margin: EdgeInsets.only(left: 20),
+                child: Row(
+                  children: [
+                    const Icon(
+                      Icons.person_add,color: Colors.white
+                    ),
+                     SizedBox(width: 10,),
+                        Text(
+                          'Invite Friends', textAlign: TextAlign.start,
+                          style: const TextStyle(fontSize: 14,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold
+                          ),
+                        ),
+                        Container(
+                          margin: EdgeInsets.only(left: 165),
+                          child: Row(
+                         children: [
+                            IconButton(
+                          onPressed: (){},
+                  icon: Icon(Icons.arrow_forward_ios,color: Colors.white,
+                            ))
+                      ],                     
+                    ),
+                  ),
+                  ],
+                )
+                ),  
+                Container(
+                  margin: EdgeInsets.only(top: 70),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+
+                      ElevatedButton(
+                onPressed: () {
+                  showDialog(
+                      context: context,
+                      builder: (context) => SimpleDialog(
+                            title: Align(alignment: Alignment.center, child: Text("Apakah Anda Yakin Ingin Keluar Aplikasi?", style: TextStyle(color: Colors.black, fontFamily: 'Poppins', fontSize: 14,))),
+                            contentPadding: EdgeInsets.all(30),
+                            children: [                       
+                              Container(
+                                  margin: EdgeInsets.only(top: 10),
+                                  child: TextButton(
+                                      onPressed: () {
+                                        Navigator.push(context, MaterialPageRoute(builder: (context) => tampilan()));
+                                      },
+                                      child: Text("Yes"))),
+                                      Container(
+                                  margin: EdgeInsets.only(top: 10),
+                                  child: TextButton(
+                                      onPressed: () {
+                                        Navigator.push(context, MaterialPageRoute(builder: (context) => beranda()));
+                                      },
+                                      child: Text("No")))
+                            ],
+                          ));
+                },
+                child: Text("Sign Out"),
+                style: ElevatedButton.styleFrom(
+                  primary: Color.fromRGBO(133, 89, 65, 1),
+                  minimumSize: Size(200, 40),
+                  textStyle: TextStyle(
+                    fontSize: 16, color: Colors.white, fontFamily: 'Poppins'
+                  ),
+                  
+                ),
+              ),
+               IconButton(
+                      onPressed: (){
+                        Navigator.pop(context);
+                      },
+                      icon: Icon(Icons.login, color: Colors.white,),
+                    ),
+                    ]
+                  ),
+                ),  
+              ]
+              ),
+            ),
+                  
+
+     
+            
 
                 ],
               ),
@@ -214,8 +328,16 @@ class _profileState extends State<profile> {
           ])),
         ],
       ),
-    );
+          
+          );
+        // ]
+    // )
+    // );
+        
   }
+}
+
+
 
 class ProfileViewAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
@@ -225,89 +347,20 @@ class ProfileViewAppBar extends StatelessWidget {
         padding: EdgeInsets.all(10.0),
         child: FlatButton(
           onPressed: () {},
-          child: Icon(Icons.arrow_back_ios, color: Colors.red),
+          child: Icon(Icons.arrow_back_ios, color: Colors.black,),
         ),
       ),
-      actions: <Widget>[
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: InkWell(
-            onTap: () {},
-            child: Icon(Icons.bookmark, color: Colors.yellowAccent),
-          ),
+              title: Center(
+          child: Wrap(
+        children: [
+            Text("Profile", style: TextStyle(color: Colors.black, fontSize: 16, fontFamily: 'Poppins')
+            ),
+          ]
+          )
         ),
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: InkWell(
-            onTap: () {},
-            child: Icon(Icons.settings, color: Colors.purple),
-          ),
-        ),
-        SizedBox(width: 10.0)
-      ],
+        actions: [
+          IconButton(onPressed:() {} , icon: Icon(Icons.notifications, color: Colors.black,))
+        ]
     );
   }
 }
-
-// class ProfileRating extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Container(
-//       padding: EdgeInsets.symmetric(horizontal: 30.0, vertical: 10.0),
-//       child: Flex(
-//         crossAxisAlignment: CrossAxisAlignment.center,
-//         direction: Axis.horizontal,
-//         mainAxisAlignment: MainAxisAlignment.center,
-//         children: <Widget>[
-//           StarRating(5, colors: [RecehanColors.red, RecehanColors.redWarm]),
-//           SizedBox(width: 20.0),
-//           StarRating(2, colors: [RecehanColors.purple, RecehanColors.purpleWarm]),
-//           SizedBox(width: 20.0),
-//           StarRating(3, colors: [RecehanColors.yellow, RecehanColors.yellowWarm])
-//         ],
-//       ),
-//     );
-//   }
-// }
-
-// class StarRating extends StatelessWidget {
-//   final int star;
-//   final List<Color> colors;
-  
-//   StarRating(this.star, {required this.colors});
-
-//   Widget build(BuildContext context) {
-//     return Container(
-//       width: MediaQuery.of(context).size.width / 5,
-//       height: 70.0,
-//       padding: EdgeInsets.all(10.0),
-//       decoration: BoxDecoration(
-//         borderRadius: BorderRadius.circular(20.0),
-//         boxShadow: [BoxShadow(
-//           blurRadius: 5.0,
-//           color: Colors.black.withOpacity(.2)
-//         )],
-//         gradient: LinearGradient(
-//           colors: colors == null ? [Colors.red, Colors.white] : colors
-//         )
-//       ),
-//       child: Column(
-//         crossAxisAlignment: CrossAxisAlignment.center,
-//         mainAxisAlignment: MainAxisAlignment.center,
-//         children: <Widget>[
-//           Text(star.toString() + '.0', style: TextStyle(
-//             fontSize: 20.0,
-//             color: Colors.white.withOpacity(.7),
-//             fontWeight: FontWeight.w700
-//           )),
-//           Flexible(
-//             child: Row(
-//               mainAxisSize: MainAxisSize.min,
-//               children: List.generate(star, (index) => Icon(Icons.star, size: 10.0, color: Colors.white.withOpacity(.7))),
-//             ),
-    //       )
-    //     ],
-    //   ),
-    // );
-//   }
-// }

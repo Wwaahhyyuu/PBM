@@ -1,3 +1,4 @@
+import 'package:coba1/notification.dart';
 import 'package:flutter/material.dart';
 import 'Beranda.dart';
 import 'Fvcolors.dart';
@@ -41,7 +42,7 @@ class _LocationState extends State<Location> {
         ),
         
         actions: [
-          IconButton(onPressed:(){Navigator.push(context, MaterialPageRoute(builder: (context) => beranda()));}, icon: Icon(Icons.notifications, color: Colors.black,), padding: EdgeInsets.only(right: 20),)
+          IconButton(onPressed:(){Navigator.push(context, MaterialPageRoute(builder: (context) => notification()));}, icon: Icon(Icons.notifications, color: Colors.black,), padding: EdgeInsets.only(right: 20),)
         ],),
       body: Center(
         child:Column(

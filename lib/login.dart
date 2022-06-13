@@ -21,7 +21,7 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(backgroundColor: Colors.white, title: Center( child: Container ( width: 300, height: 40,margin: EdgeInsets.only(right:40), decoration: BoxDecoration(border: Border.all(width:2.0, color: Colors.brown ), borderRadius: BorderRadius.circular(10)), child: Center (child: Text('SIGN IN', style: const TextStyle(  color: Colors.black, 
+      appBar: AppBar(backgroundColor: Colors.white, title: Center( child: Container (margin: EdgeInsets.only(), width: 300, height: 40, decoration: BoxDecoration(border: Border.all(width:2.0, color: Colors.brown ), borderRadius: BorderRadius.circular(10)), child: Center (child:Text('SIGN IN', style: const TextStyle(  color: Colors.black, 
       fontWeight: FontWeight.bold),),),
       ),
        ),
@@ -107,6 +107,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       width: 250,
                       height: 40,
                       child: TextField(
+                         obscureText: true,
                         controller: password,
                         decoration: InputDecoration(
                           border: OutlineInputBorder(
